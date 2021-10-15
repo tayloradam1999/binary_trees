@@ -49,7 +49,7 @@ int is_perfect(const binary_tree_t *tree, int d, int level)
 		return (1);
 
 	if (!tree->left && !tree->right)
-		return (d == level + 1);
+		return (level + 1);
 	if (!tree->left || !tree->right)
 		return (0);
 	return (is_perfect(tree->left, d, level + 1) &&
